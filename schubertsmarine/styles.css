@@ -1,0 +1,393 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Globals */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Variables */
+
+.fs-200 { font-size: .5rem; }
+.fs-300 { font-size: .75rem; }
+.fs-400 { font-size: 1rem; }
+.fs-500 { font-size: 1.25rem; }
+.fs-600 { font-size: 2rem; }
+.fs-700 { font-size: 3rem; }
+.fs-800 { font-size: 3.5rem; }
+
+.line-height-1 { line-height: 2rem; }
+.line-height-2 { line-height: 3.25rem;}
+
+.text-white { color: #fff; }
+
+/* Utility Classes */
+
+.container {
+  width: clamp(5rem, 70vw ,85vw);
+  margin-inline: auto;
+}
+
+.flex { 
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.subheading {
+  padding-top: 5rem;
+}
+.heading {
+  padding-bottom: 0;
+}
+
+/* Buttons */
+
+.button {
+  padding: 1.25rem;
+  font-size: 1.25rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+
+/* Landing */
+
+.landing {  
+  background: url(./assets/centercon2.jpeg) no-repeat center center;
+  background-size: cover;
+  background-position-y: 0%; 
+  background-color: rgb(0, 31, 172);
+  height: 100vh; 
+}
+
+/* Header */
+
+.header {
+  padding-top: 5vh
+}
+
+.header-container {
+  padding: 0 2rem;
+  justify-content: space-between;
+  align-items: end;
+}
+
+
+.header-content {
+  flex-direction: column;
+  align-items: flex-end; 
+  gap: 1rem;
+} 
+
+.nav__item {
+  padding-left: 4rem;
+}
+
+.landing-content {
+  flex-direction: column;
+  padding-top: 25vh;
+  padding-right: 30vw;
+  gap: 2rem;
+}
+
+.landing__subheading {
+  padding-top: 2rem;
+  padding-right: 16rem;
+}
+
+.landing__button {
+  border: 3px solid hsla(255, 100%, 100%, .25);
+}
+
+.landing-exit {
+  padding-top: 10rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+/* Main Content Area */
+
+.main {
+  padding: 5rem 0;
+}
+
+/* Services */
+
+.main-services {
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+.services {
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 5rem 0;
+  gap: 5rem;
+}
+
+.service {
+  padding-top: 5rem 2rem;
+  flex: 1;
+}
+
+.service__copy {
+  padding: 1.5rem 0;
+}
+
+.service__link {
+  text-align: right;
+  padding: 0 2rem;
+}
+
+/* Testimonials */
+
+.main-testimonials {
+  text-align: center;
+  background-color: #f1f1f1;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  height: 100vh;
+}
+
+.testimonials {
+  padding: 5rem 0;
+  gap: 10rem;
+}
+
+.testimonial {
+  border: 1px solid #ececec;
+  background-color: #fff;
+  box-shadow: 0 5px 15px hsla(0, 0%, 0%, .05);
+  padding: 10rem 2.5rem;
+}
+
+.testimonial > * {
+  padding: 1rem;
+}
+
+.main-highlights {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.highlights { 
+  padding: 5rem 0;
+  gap: 5rem;
+  align-items: top;
+}
+
+.highlights__list {
+  margin: 4rem 0;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.highlights__list--item { 
+  flex: 1;
+}
+
+.highlights__header {
+  margin-bottom: 5rem;
+}
+
+.highlights-content {
+  width: 50%;
+}
+
+
+/* 
+.highlights__img {
+  clip-path: circle();
+} 
+*/
+
+.highlights-partners {
+
+  margin-top: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners__heading {
+  opacity: .5;
+}
+
+.partners__list {
+  margin-top: 1rem;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.partner img {
+  fill: #fff;
+}
+
+
+
+
+
+
+/* Footer */
+
+.footer {
+  padding: 5rem;
+  background-color: #00012b;
+}
+
+.footer-request {
+  padding: 5rem 0;
+  grid-template-columns: 4fr 2fr;
+}
+
+.footer-request.subheading,
+.footer-request.heading {
+  text-align: left;
+}
+
+.footer-request__button {
+  border: 0;
+  background-color: #fff;
+  opacity: 1;
+}
+
+/* Form */
+
+.form {
+  padding-right: 10rem;
+}
+
+.form-field {
+
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.form-field label {
+  color: #fff;
+}
+
+.form-field input,
+.form-field select {
+  height: 3.5rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Map */
+#map {
+  
+}
+
+/* Footer Contact - Link Info */
+
+.footer-content {
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 5rem;
+  padding-top: 5rem;
+  border-top: 5px solid hsla(255, 100%, 100%, .25);
+}
+
+
+
+
+.footer__list {
+  color: #fff;
+}
+
+.footer__heading {
+  padding-bottom: 1rem;
+}
